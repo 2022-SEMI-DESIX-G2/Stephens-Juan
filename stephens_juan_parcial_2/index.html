@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcial #2</title>
+</head>
+<body>
+    <img src="imagenes\pokeapi_256.png" alt="Buscador de pokemon" id="img_poke_api"/>
+    <div id="div_card_filter">
+        <form name="find_pokemon_form" id="find_pokemon_form">
+            <span class="title_form">Buscador de pokemones</span><br>
+            <span class="subtitile_form">Busca desde pokemones hasta las abilidades de los mismos.</span><br>
+            <table width="100%">
+                <tr>
+                    <td width="50%" class="etiqueta_table_form">
+                        Buscar
+                    </td>
+                    <td  width="50%" class="etiqueta_table_form">
+                        Tipo de b&uacute;squeda
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="find_pokemon_input" class="input_pokemon_form" type="text">
+                    </td>
+                    <td>
+                        <select id="find_pokemon_select_type" class="input_pokemon_form">
+                            <option value="pokemon">Pokemon</option>
+                            <option value="ability">Ability</option>
+                        </select>
+                    </td>
+                </tr>
+            </table> 
+            <button type="button" id="btn_clear_form_pokemon" class="btn_clear" style="display: none;">Limpiar</button>
+            <button type="submit" id="btn_find_form_pokemon" class="btn_find">Buscar</button>       
+        </form>
+    </div>
+    <div id="div_card_results_pokemon" style="display: none;">
+    </div>
+    <div id="div_card_results_ability" style="display: none;">
+    </div>
+    <link rel="stylesheet" type="text/css" href="index.css" media="screen" />
+    <script src="util.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
