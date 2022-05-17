@@ -107,3 +107,9 @@ color: black;
     line-height: 15px;
     color:#ffff;
 }
+
+.imagen_pokemon{
+    width: 45px;
+    height: 45px;
+    z-index: -1;
+}

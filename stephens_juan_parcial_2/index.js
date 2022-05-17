@@ -77,9 +77,20 @@
         },
         errorCard: () => `<h1>There was an error</h1>`,
         pokemonCard: ({ id, name, weight, height, sprites }) => {
-          return `<span class='.name_pokemon'>${name} (${id})<span>
-                  <image src='${sprites.back_default}'>
-                  <ul><li>Weight: ${weight}</li><li>Height: ${height}</li></ul>`;
+          const image = `<td><image class='imagen_pokemon' src='${sprites.back_default}'>
+                             <image class='imagen_pokemon' src='${sprites.front_default}'></td>`;
+          const altura = `<td>${weight} / ${height}</td>`;
+          return `<table width="100%">
+                  <caption>${name} (${id})</caption>
+                  <tr>
+                  <td>Imagen</td>
+                  <td>Ancho / Alto</td>
+                  </tr>
+                  <tr>
+                      ${image}
+                      ${altura}
+                  </tr>
+                  `;
         },
         abilityCard: ({ id, name, pokemon }) => {
           const pokemonList = pokemon.map(
