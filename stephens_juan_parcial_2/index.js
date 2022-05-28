@@ -45,9 +45,11 @@
           if (searchType == "pokemon") {
             App.htmlElements.pokemonFinderOutputPokemon.innerHTML = renderedTemplate;
             App.htmlElements.pokemonFinderOutputPokemon.style.display = 'block';
+            App.htmlElements.pokemonFinderOutputAbility.style.display = 'none';
           } else {
             App.htmlElements.pokemonFinderOutputAbility.innerHTML = renderedTemplate;
             App.htmlElements.pokemonFinderOutputAbility.style.display = 'block';
+            App.htmlElements.pokemonFinderOutputPokemon.style.display = 'none';
           }
           App.htmlElements.pokemonFinderClear.style.display = '';
           App.htmlElements.pokemonFinderClear.style.float = 'left';
@@ -85,19 +87,19 @@
       pokemonCard: async ({ id, name, weight, height, sprites, abilities, species }) => {
         const image = `<td><image class='imagen_pokemon' src='${sprites.back_default}'>
                              <image class='imagen_pokemon' src='${sprites.front_default}'></td>`;
-        const altura = `<td>${weight} / ${height}</td>`;
+        const altura = `<td class='parrafo_card'>${weight} / ${height}</td>`;
         const pokemonAbilitys = App.templates.pokemonAbilitys({ abilities });
         const pokemonEvolution = await App.templates.pokemonEvolutions({ species });
-        return `<table width="100%">
-                  <caption>${name} (${id})</caption>
+        return `<div class='title_card'>${name} (${id})</div>
+                 <table width="100%">
                   <tr>
-                  <td>Imagen</td>
-                  <td>Ancho / Alto</td>
+                  <td width='50%' class='subtitile_card'>Imagen</td>
+                  <td width='50%' class='subtitile_card'>Ancho / Alto</td>
                   </tr>
                   <tr> ${image} ${altura} </tr>
                   <tr>
-                  <td>Evoluciones</td>
-                  <td>Habilidades</td>
+                  <td class='subtitile_card'>Evoluciones</td>
+                  <td class='subtitile_card'>Habilidades</td>
                   </tr>
                   <tr><td> ${pokemonEvolution} </td><td> ${pokemonAbilitys} </td></tr>
                   `;
@@ -114,7 +116,7 @@
       pokemonAbilitys: ({ abilities }) => {
         const pokemonAbilitiesList = abilities.map(
           ({ ability, is_hidden }) =>
-            `<li>${ability.name}${is_hidden ? App.htmlElements.svgpokemonhidden : ""
+            `<li class='parrafo_card'>${ability.name}${is_hidden ? App.htmlElements.svgpokemonhidden : ""
             }</li>`
         );
         return `<ul>${pokemonAbilitiesList.join("")}</ul>`;
@@ -124,7 +126,7 @@
 
         const pokemonEvolvesList = evoluciones.map(
           ({ name, isbaby }) =>
-            `<li>${name}${isbaby ? App.htmlElements.svgpokemonbaby : ""
+            `<li class='parrafo_card'>${name}${isbaby ? App.htmlElements.svgpokemonbaby : ""
             }</li>`
         );
         return `<ul>${pokemonEvolvesList.join("")}</ul>`;
