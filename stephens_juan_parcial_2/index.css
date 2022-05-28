@@ -20,6 +20,14 @@ width: 314px;
 height: 29px;
 }
 
+.span_title_ability{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 900;
+font-size: 18px;
+line-height: 22px;
+}
+
 .subtitile_form{
     font-family: 'Montserrat';
 font-style: normal;
