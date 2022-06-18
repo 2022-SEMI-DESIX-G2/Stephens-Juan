@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" type="text/css" />
+    <title>Proyecto 1</title>
+  </head>
+  <body>
+    <div id="main-div" class="">
+      <div id="main-title">
+        Poke-informaci&oacute;n
+      </div>
+      <div id="pokemon-form-div">
+        <section>
+          <main>
+            <form id="pokemon-form">
+              <label for="pokemon-input">Nombre:</label>
+              <input type="text" class="input-pokemon-form" id="pokemon-input" focus/>
+              <fieldset>
+                <legend>Filtros:</legend>
+                <input type="checkbox" class="check-filter" name="generales-check" id="generales-check" value="S" checked disabled="disabled"> Generales
+                <input type="checkbox" class="check-filter" name="sprite-check" value="S" id="sprite-check"> Sprites
+                <input type="checkbox" class="check-filter" name="ubicacion-check" value="S" id="ubicacion-check"> Ubicaci&oacute;n
+                <input type="checkbox" class="check-filter" name="evolucion-check" value="S" id="evolucion-check"> Cadena de evoluci&oacute;n
+              </fieldset> 
+              <button type="submit" class="btn-pokemon-form">Buscar</button>
+            </form>
+          </main>
+        </section>
+      </div>
+
+      <div>
+        <button class="accordion">Generales</button>
+        <div class="panel" id="div-general">
+        </div>
+
+        <button class="accordion">Sprites</button>
+        <div class="panel" id="div-sprite">
+        </div>
+
+        <button class="accordion">Ubicaciones</button>
+        <div class="panel" id="div-ubicacion">
+        </div>
+
+        <button class="accordion">Cadena de evoluci&oacute;n</button>
+        <div class="panel" id="div-evolucion">
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
