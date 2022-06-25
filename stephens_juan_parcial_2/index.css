@@ -110,6 +110,7 @@ line-height: 15px;
     width: 108px;
     height: 27px;
     float: right;
+    cursor: wait;
 
     font-style: normal;
     font-weight: 700;
@@ -124,6 +125,7 @@ line-height: 15px;
     border: 0px;
     width: 108px;
     height: 27px;
+    cursor: wait;
 
     font-style: normal;
     font-weight: 700;

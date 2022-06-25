@@ -1,5 +1,5 @@
 body{
-    background-color: #367AA7;
+    background-image: url("./imagenes/pokemon_background.png");
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -11,7 +11,7 @@ body{
 #main-div{
     margin: 40px;  
     padding: 20px;
-    background-color: whitesmoke;
+    background-color: rgba(245, 245, 245, 0.85);
     height: 100%;
     border-radius: 20px;
 }
@@ -24,12 +24,8 @@ body{
     font-size: 1.2rem;
 }
 
-.check-filter{
-    margin-inline: 40px; 
-}
-
 .btn-pokemon-form{
-    background-color: #405460;
+    background-color:rgb(20, 36, 65);
     border-radius: 40px;
     padding-left: 10px;
     border: none;
@@ -41,7 +37,7 @@ body{
 }
 
 .btn-pokemon-form:hover{
-    background-color: #A1ADB4;
+    background-color: #405460;
     cursor: pointer;
 }
 
@@ -63,6 +59,16 @@ body{
   padding: 20px;
 }
 
+.check-filter{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.check {
+  width:15px;
+  height:15px;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -76,9 +82,16 @@ body{
   min-width: 200px;
   min-height: 50px;
 }
+
+@media (max-width: 600px) {
+  .check-filter{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+  }
+}
 /* DISEÑOS PARA EL ACCORDION */
 .accordion {
-    background-color: #405460;
+    background-color:rgb(20, 36, 65);
     color: white;
     cursor: pointer;
     font-size: 1.5rem;
@@ -93,7 +106,7 @@ body{
   }
   
   .active, .accordion:hover {
-    background-color: #A1ADB4;
+    background-color: #405460;
   }
 
   .accordion:after {

@@ -109,9 +109,7 @@ const getListEvoluciones = ({ species, evolves_to }, arrEvolutions) => {
 };
 
 const formatearCache = () => {
-  console.log(`CACHE LLENO ${CACHE}`);
   CACHE.splice(0);
-  console.log(`CACHE VACIO ${CACHE}`);
   setTimeout(formatearCache, time);
 };
 
